@@ -1,54 +1,53 @@
-# Azure Search Power Skills
+# Azure Cognitive Search パワースキル
 
-Power Skills are a collection of useful functions to be deployed as custom skills for Azure Cognitive Search. The skills can be used as [templates](Template/HelloWorld/README.md) or starting points for your own custom skills, or they can be deployed and used as they are if they happen to meet your requirements. We also invite you to contribute your own work by submitting a [pull request](https://github.com/Azure-Samples/azure-search-power-skills/compare).
+パワースキルは、Azure Cognitive Searchのカスタムスキルとして展開される便利な機能のコレクションです。スキルは、[テンプレート](Template/HelloWorld/README.md)または独自のカスタムスキルの開始点として使用できます。また、要件を満たしていれば、そのまま展開して使用することもできます。また、[プルリクエスト](https://github.com/nohanaga/azure-search-power-skills/compare)を送信して、ご自身の作業に貢献することをお勧めします。
 
-## Features
+## 機能
 
-This project provides the following custom skills:
+このプロジェクトは、次のカスタムスキルを提供します。
 
-* [**HelloWorld**](Template/HelloWorld/README.md): a minimal skill that can be used as a starting point or template for your own skills.
-* [**GeoPointFromName**](Geo/GeoPointFromName/README.md): retrieves coordinates from place names and addresses.
-* [**BingEntitySearch**](Text/BingEntitySearch/README.md): finds rich and structured information about public figures, locations, or organizations.
-* [**AcronymLinker**](Text/AcronymLinker/README.md): provides definitions for known acronyms.
-* [**ImageStore**](Vision/ImageStore/README.md): stores and fetches base64-encoded images to and from blob storage.
-* [**HocrGenerator**](Vision/HocrGenerator/README.md): transforms the result of OCR into the hOCR format.
-* [**AnalyzeForm**](Vision/AnalyzeForm/README.md): recognizes form fields in a document.
-* [**CustomEntityLookup**](/Text/CustomEntitySearch): finds custom entity names in text.
-* [**Tokenizer**](Text/Tokenizer/README.md): extracts non-stop words from a text.
-* [**Distinct**](Text/Distinct/README.md): de-duplicates a list of terms.
-* [**GetFileExtension**](Utils/GetFileExtension/README.md): returns the filename and extension as separate values allowing you to filter on document type.
+* [**HelloWorld**](Template/HelloWorld/README.md): 自分のスキルの出発点またはテンプレートとして使用できる最小限のスキル。
+* [**GeoPointFromName**](Geo/GeoPointFromName/README.md): 場所の名前と住所から座標を取得します。
+* [**BingEntitySearch**](Text/BingEntitySearch/README.md): 公共の人物、場所、または組織に関する豊富で構造化された情報を見つけます。
+* [**AcronymLinker**](Text/AcronymLinker/README.md): 既知の頭字語の定義を提供します。
+* [**ImageStore**](Vision/ImageStore/README.md): base64でエンコードされた画像をblobストレージとの間で保存およびフェッチします。
+* [**HocrGenerator**](Vision/HocrGenerator/README.md): OCRの結果をhOCR形式に変換します。
+* [**AnalyzeForm**](Vision/AnalyzeForm/README.md): 文書内のフォームフィールドを認識します。
+* [**CustomEntityLookup**](/Text/CustomEntitySearch): テキスト内のカスタムエンティティ名を検索します。
+* [**Tokenizer**](Text/Tokenizer/README.md): テキストからノンストップワードを抽出します。
+* [**Distinct**](Text/Distinct/README.md): 用語のリストを重複排除します。
+* [**GetFileExtension**](Utils/GetFileExtension/README.md): ファイル名と拡張子を個別の値として返し、ドキュメントタイプでフィルタリングできます。
 
 ## Getting Started
 
-### Prerequisites
+### 前提条件
 
-In order to use the functions in this project, you'll need an active Azure subscription. Most of the functions can be used on their own for quick evaluation and experimentation, but they are meant to be used as part of an [Azure Cognitive Search pipeline](https://docs.microsoft.com/azure/search/cognitive-search-quickstart-blob).
-Each function may also add its own specific requirements, such as API keys for services they leverage.
+このプロジェクトの機能を使用するには、アクティブなAzureサブスクリプションが必要です。ほとんどの機能は、迅速な評価と実験のために単独で使用できますが、[Azure Cognitive Searchパイプライン](https://docs.microsoft.com/azure/search/cognitive-search-quickstart-blob)の一部として使用することを目的としています。各機能は、利用するサービスのAPIキーなど、独自の特定の要件を追加する場合もあります。
 
-[Visual Studio 2019](https://visualstudio.microsoft.com/) is recommended, but not required. You need a recent version of the C# compiler. [Postman](https://www.getpostman.com/) is highly recommended as a way to experiment and test skills.
+[Visual Studio 2019](https://visualstudio.microsoft.com/)をお勧めしますが、必須ではありません。最新バージョンのC＃コンパイラが必要です。[Postman](https://www.getpostman.com/)は、スキルを実験およびテストする方法として強く推奨されます。
 
-### Installation and deployment
+### インストールとデプロイ
 
-If using Visual Studio with the Azure workload installed, no installation is required, and the functions can just be run locally using F5.
+AzureワークロードがインストールされたVisual Studioを使用する場合、インストールは不要であり、機能はF5を使用してローカルで実行することができます。
 
-Deployment of a function to Azure can be done [through Visual Studio](https://docs.microsoft.com/azure/azure-functions/deployment-zip-push), the Deploy to Azure button, or [continuous deployment](https://docs.microsoft.com/azure/azure-functions/functions-continuous-deployment).
+Azureへの機能のデプロイは、[Visual Studioを通じて](https://docs.microsoft.com/azure/azure-functions/deployment-zip-push)、[Azureにデプロイ]ボタン、または[継続的デプロイメント](https://docs.microsoft.com/azure/azure-functions/functions-continuous-deployment)で可能です。
 
-Some functions may require setting environment variables or configuration entries. Please refer to the readme file in the function's directory.
+一部の機能では、環境変数または構成エントリの設定が必要になる場合があります。 機能のディレクトリにあるREADMEファイルを参照してください。
 
-### Quickstart
+### クイックスタート
 
-1. Clone the repository
-2. Open the PowerSkills solution in Visual Studio
-3. Set the project for the function to test as the startup project
-4. Hit F5
-5. Experiment with calling the function using Postman
+1. リポジトリをクローンする
+2. Visual StudioでPower Skillsソリューションを開く
+3. テストする機能のプロジェクトをスタートアッププロジェクトとして設定する
+4. F5を押す
+5. Postmanを使用して機能を呼び出す実験をする
 
-You can also create your own skills using [our Hello World template skill](Template/HelloWorld/README.md) as a starting point.
+[私たちのHello Worldテンプレートスキル](Template/HelloWorld/README.md)を開始点として使用して、独自のスキルを作成することもできます。
 
-## Resources
+## リソース
 
 - [Contribution guidelines](CONTRIBUTING.md)
 - [Azure Search](https://azure.microsoft.com/services/search/)
 - [Azure Functions](https://azure.microsoft.com/services/functions/)
 - [JFK Files](https://github.com/microsoft/AzureSearch_JFK_Files)
-- [Knowledge Mining Solution Accelerator Guide](https://github.com/Azure-Samples/azure-search-knowledge-mining)
+- [Knowledge Mining Solution Accelerator Guide](https://github.com/nohanaga/azure-search-knowledge-mining)
