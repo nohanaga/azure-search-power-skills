@@ -24,7 +24,7 @@
 
 このプロジェクトの機能を使用するには、アクティブなAzureサブスクリプションが必要です。ほとんどの機能は、迅速な評価と実験のために単独で使用できますが、[Azure Cognitive Searchパイプライン](https://docs.microsoft.com/azure/search/cognitive-search-quickstart-blob)の一部として使用することを目的としています。各機能は、利用するサービスのAPIキーなど、独自の特定の要件を追加する場合もあります。
 
-[Visual Studio 2019](https://visualstudio.microsoft.com/)をお勧めしますが、必須ではありません。最新バージョンのC＃コンパイラが必要です。[Postman](https://www.getpostman.com/)は、スキルを実験およびテストする方法として強く推奨されます。
+[Visual Studio 2019](https://visualstudio.microsoft.com/)をお勧めしますが、必須ではありません。最新バージョンのC#コンパイラが必要です。[Postman](https://www.getpostman.com/)は、スキルを実験およびテストする方法として強く推奨されます。
 
 ### インストールとデプロイ
 

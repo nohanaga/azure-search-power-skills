@@ -5,30 +5,30 @@ languages:
 products:
 - azure
 - azure-search
-azureDeploy: https://raw.githubusercontent.com/Azure-Samples/azure-search-power-skills/master/Template/HelloWorld/azuredeploy.json
+azureDeploy: https://raw.githubusercontent.com/nohanaga/azure-search-power-skills/master/Template/HelloWorld/azuredeploy.json
 name: "Hello World sample skill for cognitive search"
-description: "This Hello World custom skills can be used as a template to create your own skills."
+description: "このHello Worldカスタムスキルは、独自のスキルを作成するためのテンプレートとして使用できます。"
 ---
 
-# Hello World (template)
+# Hello World (テンプレート)
 
-This "Hello World" custom skills can be used as a template to create your own skills.
+この「Hello World」カスタムスキルは、独自のスキルを作成するためのテンプレートとして使用できます。
 
-## Requirements
+## 必要条件
 
-This skill has no additional requirements than the ones described in [the root `README.md` file](../../README.md).
+このスキルには、[ルート`README.md`](../../README.md) に記載されているもの以外の要件はありません。
 
-## Settings
+## 設定
 
-This function doesn't require any application settings.
+この機能は、アプリケーション設定を必要としません。
 
-## Deployment
+## デプロイ
 
-[![Deploy to Azure](https://azuredeploy.net/deploybutton.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure-Samples%2Fazure-search-power-skills%2Fmaster%2FTemplate%2FHelloWorld%2Fazuredeploy.json)
+[![Deploy to Azure](https://azuredeploy.net/deploybutton.svg)](https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fnohanaga%2Fazure-search-power-skills%2Fmaster%2FTemplate%2FHelloWorld%2Fazuredeploy.json)
 
 ## hello-world
 
-### Sample Input:
+### サンプルインプット
 
 ```json
 {
@@ -44,7 +44,7 @@ This function doesn't require any application settings.
 }
 ```
 
-### Sample Output:
+### サンプルアウトプット:
 
 ```json
 {
@@ -61,10 +61,10 @@ This function doesn't require any application settings.
 }
 ```
 
-## Sample Skillset Integration
+## スキルセット統合の例
 
-In order to use this skill in a cognitive search pipeline, you'll need to add a skill definition to your skillset.
-Here's a sample skill definition for this example (inputs and outputs should be updated to reflect your particular scenario and skillset environment):
+このスキルをCognitive Searchパイプラインで使用するには、スキル定義をスキルセットに追加する必要があります。
+この例のスキル定義の例を次に示します（特定のシナリオとスキルセット環境を反映するように入力と出力を更新する必要があります）。
 
 ```json
 {
