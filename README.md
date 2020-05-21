@@ -1,6 +1,6 @@
 # Azure Cognitive Search パワースキル
 
-パワースキルは、Azure Cognitive Searchのカスタムスキルとして展開される便利な機能のコレクションです。スキルは、[テンプレート](Template/HelloWorld/README.md)または独自のカスタムスキルの開始点として使用できます。また、要件を満たしていれば、そのまま展開して使用することもできます。また、[プルリクエスト](https://github.com/nohanaga/azure-search-power-skills/compare)を送信して、ご自身の作業に貢献することをお勧めします。
+パワースキルは、Azure Cognitive Searchのカスタムスキルとして展開される便利な機能のコレクションです。スキルは、[テンプレート](Template/HelloWorld/README.md)または独自のカスタムスキルの開始点として使用できます。また、要件を満たしていれば、そのまま展開して使用することもできます。また、プルリクエストを送信して、ご自身の作業に貢献することをお勧めします。
 
 ## 機能
 
@@ -30,7 +30,7 @@
 
 AzureワークロードがインストールされたVisual Studioを使用する場合、インストールは不要であり、機能はF5を使用してローカルで実行することができます。
 
-Azureへの機能のデプロイは、[Visual Studioを通じて](https://docs.microsoft.com/azure/azure-functions/deployment-zip-push)、[Azureにデプロイ]ボタン、または[継続的デプロイメント](https://docs.microsoft.com/azure/azure-functions/functions-continuous-deployment)で可能です。
+Azure Functionsへのデプロイは、[Visual Studioを通じて](https://docs.microsoft.com/azure/azure-functions/deployment-zip-push)、[Azureにデプロイ]ボタン、または[継続的デプロイメント](https://docs.microsoft.com/azure/azure-functions/functions-continuous-deployment)で可能です。
 
 一部の機能では、環境変数または構成エントリの設定が必要になる場合があります。 機能のディレクトリにあるREADMEファイルを参照してください。
 
@@ -42,12 +42,12 @@ Azureへの機能のデプロイは、[Visual Studioを通じて](https://docs.m
 4. F5を押す
 5. Postmanを使用して機能を呼び出す実験をする
 
-[私たちのHello Worldテンプレートスキル](Template/HelloWorld/README.md)を開始点として使用して、独自のスキルを作成することもできます。
+[Hello Worldテンプレートスキル](Template/HelloWorld/README.md)を開始点として使用して、独自のスキルを作成することもできます。
 
 ## リソース
 
 - [Contribution guidelines](CONTRIBUTING.md)
-- [Azure Search](https://azure.microsoft.com/services/search/)
+- [Azure Cognitive Search](https://azure.microsoft.com/services/search/)
 - [Azure Functions](https://azure.microsoft.com/services/functions/)
 - [JFK Files](https://github.com/microsoft/AzureSearch_JFK_Files)
 - [Knowledge Mining Solution Accelerator Guide](https://github.com/nohanaga/azure-search-knowledge-mining)
